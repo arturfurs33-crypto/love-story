@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Наша история ❤️</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:linear-gradient(180deg,#ffd6e7,#fff0f6,#ffe3ee);
+  overflow-x:hidden;
+  color:#5b2440;
+}
+.section{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:24px;
+  text-align:center;
+}
+.card{
+  width:min(94%,900px);
+  background:rgba(255,255,255,.75);
+  backdrop-filter:blur(12px);
+  border-radius:28px;
+  padding:24px;
+  box-shadow:0 12px 35px rgba(214,51,132,.18);
+}
+h1,h2{color:#d63384;margin:10px 0 18px}
+p{font-size:18px}
+.btn{
+  display:inline-block;
+  margin-top:22px;
+  padding:14px 28px;
+  background:#ff6fa5;
+  color:white;
+  text-decoration:none;
+  border-radius:999px;
+  box-shadow:0 6px 16px rgba(255,111,165,.35);
+}
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+.gallery img{
+  width:100%;
+  height:330px;
+  object-fit:cover;
+  border-radius:22px;
+  cursor:pointer;
+  transition:.25s;
+  box-shadow:0 8px 20px rgba(0,0,0,.16);
+}
+.gallery img:hover{transform:scale(1.03)}
+.fade{opacity:0;transform:translateY(40px);transition:.8s ease}
+.fade.visible{opacity:1;transform:none}
+
+#intro{
+  position:fixed;
+  inset:0;
+  background:linear-gradient(180deg,#ffd6e7,#fff0f6);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+  text-align:center;
+  padding:20px;
+}
+#intro button{
+  font-size:21px;
+  padding:18px 34px;
+  border:none;
+  border-radius:999px;
+  background:#ff6fa5;
+  color:white;
+  cursor:pointer;
+}
+.heart{
+  position:fixed;
+  top:-25px;
+  font-size:22px;
+  animation:fall linear forwards;
+  pointer-events:none;
+  z-index:1;
+}
+@keyframes fall{
+  to{transform:translateY(110vh);opacity:0}
+}
+#lightbox{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  z-index:10000;
+  justify-content:center;
+  align-items:center;
+  padding:18px;
+}
+#lightbox img{
+  max-width:96vw;
+  max-height:92vh;
+  border-radius:18px;
+}
+@media(max-width:650px){
+  .gallery{gap:8px}
+  .gallery img{height:220px}
+  .card{padding:16px}
+}
+</style>
+</head>
+<body>
+
+<div id="intro">
+  <div>
+    <h1>❤️ Наша история ❤️</h1>
+    <p>140 дней вместе</p>
+    <button onclick="openStory()">Открыть нашу историю</button>
+  </div>
+</div>
+
+<section class="section fade">
+  <div class="card">
+    <h1>❤️ Наша история ❤️</h1>
+    <p>Начало отношений: 13.01.2026</p>
+    <p>Вместе уже 140 дней</p>
+    <a class="btn" href="#m1">Начать ✨</a>
+  </div>
+</section>
+
+
+<section id="m1" class="section fade">
+  <div class="card">
+    <h2>1 месяц 💗</h2>
+    <div class="gallery">
+      <img src="month1_1.jpg" onclick="openPhoto(this.src)" alt="1 месяц фото">
+<img src="month1_2.jpg" onclick="openPhoto(this.src)" alt="1 месяц фото">
+<img src="month1_3.jpg" onclick="openPhoto(this.src)" alt="1 месяц фото">
+<img src="month1_4.jpg" onclick="openPhoto(this.src)" alt="1 месяц фото">
+    </div>
+    <a class="btn" href="#m2">Следующий месяц ❤️</a>
+  </div>
+</section>
+
+<section id="m2" class="section fade">
+  <div class="card">
+    <h2>2 месяц 💗</h2>
+    <div class="gallery">
+      <img src="month2_1.jpg" onclick="openPhoto(this.src)" alt="2 месяц фото">
+<img src="month2_2.jpg" onclick="openPhoto(this.src)" alt="2 месяц фото">
+<img src="month2_3.jpg" onclick="openPhoto(this.src)" alt="2 месяц фото">
+<img src="month2_4.jpg" onclick="openPhoto(this.src)" alt="2 месяц фото">
+    </div>
+    <a class="btn" href="#m3">Следующий месяц ❤️</a>
+  </div>
+</section>
+
+<section id="m3" class="section fade">
+  <div class="card">
+    <h2>3 месяц 💗</h2>
+    <div class="gallery">
+      <img src="month3_1.jpg" onclick="openPhoto(this.src)" alt="3 месяц фото">
+<img src="month3_2.jpg" onclick="openPhoto(this.src)" alt="3 месяц фото">
+<img src="month3_3.jpg" onclick="openPhoto(this.src)" alt="3 месяц фото">
+<img src="month3_4.jpg" onclick="openPhoto(this.src)" alt="3 месяц фото">
+    </div>
+    <a class="btn" href="#m4">Следующий месяц ❤️</a>
+  </div>
+</section>
+
+<section id="m4" class="section fade">
+  <div class="card">
+    <h2>4 месяц 💗</h2>
+    <div class="gallery">
+      <img src="month4_1.jpg" onclick="openPhoto(this.src)" alt="4 месяц фото">
+<img src="month4_2.jpg" onclick="openPhoto(this.src)" alt="4 месяц фото">
+<img src="month4_3.jpg" onclick="openPhoto(this.src)" alt="4 месяц фото">
+<img src="month4_4.jpg" onclick="openPhoto(this.src)" alt="4 месяц фото">
+    </div>
+    <a class="btn" href="#m5">Следующий месяц ❤️</a>
+  </div>
+</section>
+
+<section id="m5" class="section fade">
+  <div class="card">
+    <h2>5 месяц 💗</h2>
+    <div class="gallery">
+      <img src="month5_1.jpg" onclick="openPhoto(this.src)" alt="5 месяц фото">
+<img src="month5_2.jpg" onclick="openPhoto(this.src)" alt="5 месяц фото">
+<img src="month5_3.jpg" onclick="openPhoto(this.src)" alt="5 месяц фото">
+<img src="month5_4.jpg" onclick="openPhoto(this.src)" alt="5 месяц фото">
+    </div>
+    <a class="btn" href="#final">Финал ✨</a>
+  </div>
+</section>
+
+
+<section id="final" class="section fade">
+  <div class="card">
+    <h2>Для тебя ❤️</h2>
+    <p>
+      Спасибо за каждый день рядом. Эти фотографии — маленькие кусочки нашей истории,
+      которые я хочу сохранить навсегда. Я очень ценю всё, что у нас есть,
+      и хочу, чтобы дальше у нас было ещё больше таких моментов.
+    </p>
+  </div>
+</section>
+
+<div id="lightbox" onclick="closePhoto()">
+  <img id="bigPhoto" src="">
+</div>
+
+<script>
+function openStory(){
+  document.getElementById('intro').style.display='none';
+}
+function openPhoto(src){
+  document.getElementById('bigPhoto').src=src;
+  document.getElementById('lightbox').style.display='flex';
+}
+function closePhoto(){
+  document.getElementById('lightbox').style.display='none';
+}
+
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
+});
+document.querySelectorAll('.fade').forEach(x=>observer.observe(x));
+
+setInterval(()=>{
+  const h=document.createElement('div');
+  h.className='heart';
+  h.innerHTML=Math.random()>.5?'❤️':'💗';
+  h.style.left=Math.random()*100+'vw';
+  h.style.animationDuration=(4+Math.random()*5)+'s';
+  h.style.fontSize=(16+Math.random()*16)+'px';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),9000);
+},450);
+</script>
+
+</body>
+</html>
