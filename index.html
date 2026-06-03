@@ -115,13 +115,10 @@ p{font-size:18px}
 </head>
 <body>
 
-  <audio id="music" loop preload="auto">
-  <source src="./face247.mp3" type="audio/mpeg">
-</audio>
 <div id="intro">
   <div>
     <h1>❤️ Наша история ❤️</h1>
-    <p>141 дней вместе</p>
+    <p>140 дней вместе</p>
     <button onclick="openStory()">Открыть нашу историю</button>
   </div>
 </div>
@@ -130,7 +127,7 @@ p{font-size:18px}
   <div class="card">
     <h1>❤️ Наша история ❤️</h1>
     <p>Начало отношений: 13.01.2026</p>
-    <p>Вместе уже 141 дней</p>
+    <p>Вместе уже 140 дней</p>
     <a class="btn" href="#m1">Начать ✨</a>
   </div>
 </section>
@@ -220,13 +217,6 @@ p{font-size:18px}
 <script>
 function openStory(){
   document.getElementById('intro').style.display='none';
-
-  const music = document.getElementById('music');
-  if (music) {
-    music.volume = 0.6;
-    music.play().catch(() => {});
-  }
-}
 }
 function openPhoto(src){
   document.getElementById('bigPhoto').src=src;
