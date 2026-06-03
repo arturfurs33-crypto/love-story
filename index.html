@@ -222,8 +222,10 @@ function openStory(){
   document.getElementById('intro').style.display='none';
 
   const music = document.getElementById('music');
-  music.volume = 0.6;
-  music.play();
+  if (music) {
+    music.volume = 0.6;
+    music.play().catch(() => {});
+  }
 }
 }
 function openPhoto(src){
